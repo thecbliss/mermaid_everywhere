@@ -7,7 +7,7 @@ L.tileLayer(
     minZoom: 6,
   }).addTo(map);
 
-var url = "data/mermaid.geojson";
+var url = "mermaid.geojson";
 if (window.location.href.indexOf("github") >0) {
   url = "http://stanzheng.com/mermaid_everywhere/data/mermaid.geojson";
 }
