@@ -7,8 +7,13 @@ L.tileLayer(
     minZoom: 6,
   }).addTo(map);
 
+var url = "data/mermaid.geojson";
+if (window.location.href.indexOf("github") >0) {
+  url = "http://stanzheng.com/mermaid_everywhere/data/mermaid.geojson";
+}
+
  // load GeoJSON from an external file
-$.getJSON("../data/mermaid.geojson", function(data) {
+$.getJSON(url, function(data) {
   var ratIcon = L.icon({
     iconUrl: '../images/mermaid-icon.png',
     iconSize: [28, 28],
