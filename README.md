@@ -1,1 +1,1 @@
-[Maptime HRVA's Haunted Leaflet How-To](http://maptime.github.io/hrva/ghosts/hauntedHRVA.html) 
+[Maptime HRVA's Haunted Leaflet How-To](http://maptime.github.io/hrva/Mermaids/hauntedHRVA.html) 

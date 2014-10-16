@@ -12,7 +12,7 @@
 
 <body>
   <div id="sidebar">
-    <h1><b>Let's Map Some Ghosts!</b></h1>
+    <h1><b>Let's Map Some Mermaids!</b></h1>
     <hr>
     A Maptime HRVA Leaflet How-To
     <br><a href="https://twitter.com/maptimehrva" target="_blank">@maptimehrva</a>  &
@@ -26,12 +26,12 @@
   <div class='custom-popup' id="map"></div>
   <script>
     // initialize the map
-    var map = L.map('map').setView([37.040, -76.386], 10);
+    var map = L.map('map').setView([36.888168,-76.266884], 12);
     L.tileLayer(
       'http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png', {
         attribution: 'Map tiles by <a href=”http://stamen.com”>Stamen Design</a>, under <a href=”http://creativecommons.org/licenses/by/3.0”>CC BY 3.0</a>. Data by <a href=”http://openstreetmap.org”>OpenStreetMap</a>, under <a href=”http://creativecommons.org/licenses/by-sa/3.0”>CC BY SA</a>',
-        maxZoom: 12,
-        minZoom: 10,
+        maxZoom: 18,
+        minZoom: 6,
       }).addTo(map);
 
     var sidebar = L.control.sidebar('sidebar', {
