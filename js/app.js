@@ -8,7 +8,7 @@ L.tileLayer(
   }).addTo(map);
 
  // load GeoJSON from an external file
-$.getJSON("https://raw.githubusercontent.com/stanzheng/mermaid_everywhere/gh-pages/data/mermaid.geojson", function(data) {
+$.getJSON("../data/mermaid.geojson", function(data) {
   var ratIcon = L.icon({
     iconUrl: '../images/mermaid-icon.png',
     iconSize: [28, 28],
