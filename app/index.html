@@ -1,0 +1,143 @@
+<html>
+
+<head>
+  <title>Haunted HRVA</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link rel="stylesheet" href="L.Control.Sidebar.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="L.Control.Sidebar.js"></script>
+  <script src="jquery-2.1.1.min.js"></script>
+  <style>
+    #map {
+      height: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <style>
+    .leaflet-sidebar > .leaflet-control h1 {
+      font-size: 24pt;
+    }
+    .leaflet-sidebar > .leaflet-control bg {
+      font-size: 16pt;
+    }
+    .leaflet-sidebar > .leaflet-control it {
+      font-size: 12pt;
+      color: #252138;
+      text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
+    }
+    .leaflet-sidebar > .leaflet-control a {
+      color: #97DBB6;
+    }
+    .leaflet-sidebar > .leaflet-control hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid rgba(151, 219, 182, 0.4);
+      margin: 1em 0;
+      padding: 0;
+    }
+    .custom-popup .leaflet-popup-content-wrapper {
+      background: rgba(70, 145, 158, 0.7);
+      color: #fff;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .custom-popup .leaflet-popup-content-wrapper a {
+      color: rgba(255, 255, 255, 0.1);
+    }
+    .custom-popup .leaflet-popup-tip-container {
+      margin: 0 auto;
+      width: 40px;
+      height: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .custom-popup .leaflet-popup-tip {
+      width: 15px;
+      height: 15px;
+      padding: 1px;
+      margin: -8px auto 0;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: rgba(70, 145, 158, 0.7);
+    }
+  </style>
+  <div id="sidebar">
+    <h1><b>Let's Map Some Ghosts!</b></h1>
+    <hr>
+    A Maptime HRVA Leaflet How-To
+    <br><a href="https://twitter.com/maptimehrva" target="_blank">@maptimehrva</a>  &
+      <a href="https://twitter.com/jonahadkins" target="_blank">@jonahadkins</a>
+    <br>Mapping local paranormal activity is
+      <it>dead</it> simple. Using open source components, the following instructions will guide you to
+      <it>other side</it>  of web-mapping. This exercise assumes a
+      <it>spooky</it> knowledge of HTML and Javascript - but not at all required. This will step through
+      each phase of what you see to the right. Just keep on scrolling down in this panel.
+  </div>
+  <div class='custom-popup' id="map"></div>
+  <script>
+    // initialize the map
+    var map = L.map('map').setView([37.040, -76.386], 10);
+    L.tileLayer(
+      'http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png', {
+        attribution: 'Map tiles by <a href=”http://stamen.com”>Stamen Design</a>, under <a href=”http://creativecommons.org/licenses/by/3.0”>CC BY 3.0</a>. Data by <a href=”http://openstreetmap.org”>OpenStreetMap</a>, under <a href=”http://creativecommons.org/licenses/by-sa/3.0”>CC BY SA</a>',
+        maxZoom: 12,
+        minZoom: 10,
+      }).addTo(map);
+
+    var sidebar = L.control.sidebar('sidebar', {
+      closeButton: false,
+      position: 'left'
+    });
+
+    map.addControl(sidebar);
+
+    setTimeout(function() {
+      sidebar.show();
+    }, 500);
+
+     // load GeoJSON from an external file
+    $.getJSON("hauntedhrva.geojson", function(data) {
+      var ratIcon = L.icon({
+        iconUrl: 'boo.gif',
+        iconSize: [28, 28],
+        popupAnchor: [0, -18]
+      });
+      // add GeoJSON layer to the map once the file is loaded
+      L.geoJson(data, {
+        pointToLayer: function(feature, latlng) {
+          var marker = L.marker(latlng, {
+            icon: ratIcon
+          });
+          marker.bindPopup('<b>' + '<font size="3">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
+          return marker;
+        }
+      }).addTo(map);
+    });
+  </script>
+  <a href="https://github.com/maptime/hrva/tree/gh-pages/ghosts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10081264;
+var sc_invisible=1;
+var sc_security="1d41238b";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/free-web-stats/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10081264/0/1d41238b/1/"
+alt="web stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</body>
+
+</html>
