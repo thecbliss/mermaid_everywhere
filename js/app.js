@@ -8,9 +8,6 @@ L.tileLayer(
   }).addTo(map);
 
 var url = "mermaid.geojson";
-if (window.location.href.indexOf("github") >0) {
-  url = "http://stanzheng.com/mermaid_everywhere/data/mermaid.geojson";
-}
 
  // load GeoJSON from an external file
 $.getJSON(url, function(data) {
