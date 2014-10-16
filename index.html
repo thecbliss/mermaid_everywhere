@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Haunted HRVA</title>
+  <title>Mermaid Norfolk</title>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <link rel="stylesheet" href="L.Control.Sidebar.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
@@ -102,42 +102,26 @@
     }, 500);
 
      // load GeoJSON from an external file
-    $.getJSON("hauntedhrva.geojson", function(data) {
+    $.getJSON("mermaid.geojson", function(data) {
       var ratIcon = L.icon({
         iconUrl: 'boo.gif',
         iconSize: [28, 28],
         popupAnchor: [0, -18]
       });
+      console.log(data);
       // add GeoJSON layer to the map once the file is loaded
       L.geoJson(data, {
         pointToLayer: function(feature, latlng) {
           var marker = L.marker(latlng, {
             icon: ratIcon
           });
-          marker.bindPopup('<b>' + '<font size="3">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
+          console.log(feature);
+          marker.bindPopup('<b>' + '<font size="3">' + feature.properties.name + '</font>' + '</b>' + '<br/>' + feature.properties.address);
           return marker;
         }
       }).addTo(map);
     });
   </script>
-  <a href="https://github.com/maptime/hrva/tree/gh-pages/ghosts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=10081264;
-var sc_invisible=1;
-var sc_security="1d41238b";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web stats"
-href="http://statcounter.com/free-web-stats/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/10081264/0/1d41238b/1/"
-alt="web stats"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
 </body>
 
 </html>
