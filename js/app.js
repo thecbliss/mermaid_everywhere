@@ -12,7 +12,7 @@ var url = "mermaid.geojson";
  // load GeoJSON from an external file
 $.getJSON(url, function(data) {
   var ratIcon = L.icon({
-    iconUrl: '../images/mermaid-icon.png',
+    iconUrl: 'mermaid-icon.png',
     iconSize: [28, 28],
     popupAnchor: [0, -18]
   });
