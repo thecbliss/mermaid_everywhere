@@ -1,5 +1,5 @@
 // initialize the map
-var map = L.map('map').setView([36.888168,-76.266884], 12);
+var map = L.map('largemap').setView([36.888168,-76.266884], 12);
 L.tileLayer(
   'http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png', {
     attribution: 'Map tiles by <a href=”http://stamen.com”>Stamen Design</a>, under <a href=”http://creativecommons.org/licenses/by/3.0”>CC BY 3.0</a>. Data by <a href=”http://openstreetmap.org”>OpenStreetMap</a>, under <a href=”http://creativecommons.org/licenses/by-sa/3.0”>CC BY SA</a>',
@@ -10,7 +10,7 @@ L.tileLayer(
  // load GeoJSON from an external file
 $.getJSON("../data/mermaid.geojson", function(data) {
   var ratIcon = L.icon({
-    iconUrl: '../assets/boo.gif',
+    iconUrl: '../images/mermaid-icon.png',
     iconSize: [28, 28],
     popupAnchor: [0, -18]
   });

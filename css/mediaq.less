@@ -1,0 +1,244 @@
+/***** Tablets/Mobile: Less than: 768px wide, Greater than 480px wide *****/
+@media all and (max-width: 768px) and (min-width: 480px) {
+	wrapper {
+		h1 {
+			padding: .5em 1.2em !important;
+			font-size: 2em !important;
+		}
+	}/*wrapper*/
+}
+
+/***** Tablets: Less than: 980px wide, Greater than 768px wide *****/
+@media all and (max-width: 980px) and (min-width: 768px) {
+	/*/////////////////////////////////////////
+			CONTACT PAGE & REFER PAGE
+	////////////////////////////////////////*/
+	#contact-form {
+		padding: 0 3em;
+		h2.contact-header:first-child {
+			padding: 2em  3em 0 3em;
+		}/*h2*/
+		.form-container:last-child {
+			margin-bottom: 4em;
+		}/*form-container*/
+	}/*contact-form*/
+	
+	h3.declaration {
+		text-align: center;
+		font-size: 1.1em !important;
+	}/*h3*/
+
+	/*////////////////////////////////////
+				DIFFERENCE  PAGE
+	///////////////////////////////////*/
+	#difference {
+		.container {
+			padding: 1em 3em;
+			&:first-child {
+				margin-top: 2em;
+			}/*first-child*/
+			&:last-child {
+				margin-bottom: 2em;
+			}/*last-child*/
+				.figure-narrow {
+				display: inline-block;
+				width: 35%;
+			}/*figure*/
+			.text-container {
+				margin: .5em 0 0 1em;
+				display: inline-block;
+				width: 60%;
+				vertical-align: top;
+			}/*text-container*/
+			.text-container-long {
+				width: 100% !important;
+			}/*text-container-long*/
+		}/*container*/
+	}/*difference*/
+	
+	/*////////////////////////////////////
+				HOW IT WORKS PAGE
+	///////////////////////////////////*/
+	#howitworks {
+		.container {
+			padding: 1em 5em;
+			&:last-child {
+				margin-bottom:: 3em;
+			}/*last-child*/
+		.figure {	
+				display: inline-block;
+			}/*figure*/
+			.text-container {
+				display: inline-block;
+				width: 65%;
+				vertical-align: top;
+				margin: 1em;
+				p {
+					margin: 0 !important;
+				}/*p*/
+				ul.a-list {
+					li {
+						float: left;
+						width: 40%;
+					}/*li*/
+				}/*ul*/
+			}/*text-container*/
+		}/*container*/
+	}/*howitworks*/
+	
+	/*////////////////////////////////////
+			TESTIMONIALS PAGE
+	///////////////////////////////////*/
+	#testimonials {
+		.container {
+			padding: 1em 5em;
+				.figure {
+				width: 35%;
+				margin: 0;
+				display: inline-block;
+				.img-circle {
+					margin: 0;
+				}/*img-circle*/
+			}/*figure*/
+			.text-container {
+				margin: .5em 0 0 1em;
+				display: inline-block;
+				width: 60%;
+				vertical-align: top;
+				p {
+					text-align: left;
+					padding: 0 !important;
+				}/*p*/
+			}/*text-container*/
+		}/*container*/
+	}/*testimonials */
+
+	/*////////////////////////////////////
+					PRESS PAGE
+	///////////////////////////////////*/
+	#press {
+		margin-bottom: 2em;
+		.container {
+			padding:  1em 5em;
+			h1 {
+				margin-bottom: .5em;
+				padding: 0 !important;
+			}
+		}/*container*/
+	}/*press */
+} /*end media query*/
+
+@media only screen and (min-width:1024px) {
+	/*/////////////////////////////////////////
+			CONTACT PAGE & REFER PAGE
+	////////////////////////////////////////*/
+	#contact-form {
+		padding: 0 3em;
+		h2 {
+			padding: 0;
+			&:first-child {
+				margin: 2em 0 .5em 0;
+			}
+		}/*h2*/
+	}/*contact-form*/
+	h3.declaration {
+		text-align: center;
+		font-size: 1.1em !important;
+	}/*h3*/
+	
+	/*////////////////////////////////////
+				DIFFERENCE  PAGE
+	///////////////////////////////////*/
+	#difference {
+		.container {
+			padding: 1em 5em;
+			&:last-child {
+				margin-bottom: 2em;
+			}/*last-child*/
+			.figure-narrow {
+				display: inline-block;
+				width: 35%;
+			}/*figure*/
+			.text-container {
+				margin: .5em 0 0 1em;
+				display: inline-block;
+				width: 60%;
+				vertical-align: top;
+			}/*text-container*/
+			.text-container-long {
+				width: 100% !important;
+			}/*text-container-long*/
+		}/*container*/
+	}/*difference*/
+	
+	
+	/*////////////////////////////////////
+				HOW IT WORKS PAGE
+	///////////////////////////////////*/
+	#howitworks {
+		.container {
+			padding: 1em 10em;
+			&:last-child {
+				margin: 5em 0 3em 0;
+			}/*last-child*/
+			.figure {
+				width: 20%;
+				display: inline-block;
+			}/*figure*/
+			.text-container {
+				display: inline-block;
+				width: 65%;
+				vertical-align: top;
+				margin: 1em;
+				p {
+					margin: 0 !important;
+				}/*p*/
+				ul.a-list {
+					li {
+						float: left;
+						width: 40%;
+					}/*li*/
+				}/*ul*/
+			}/*text-container*/
+		}/*container*/
+	}/*howitworks*/
+
+/*////////////////////////////////////
+			TESTIMONIALS PAGE
+	///////////////////////////////////*/
+	#testimonials {
+		.container {
+			padding: 1em 5em;
+			.figure {
+				width: 25%;
+				margin: 0;
+				display: inline-block;
+			}/*figure*/
+			.text-container {
+				margin: .5em 0 0 1em;
+				display: inline-block;
+				width: 60%;
+				vertical-align: top;
+				p {
+					text-align: left;
+					padding: 0 !important;
+				}/*p*/
+			}/*text-container*/
+		}/*container*/
+	}/*testimonials */
+
+	/*////////////////////////////////////
+					PRESS PAGE
+	///////////////////////////////////*/
+	#press {
+		margin-bottom: 2em;
+		.container {
+			padding:  1em 5em;
+			h1 {
+				margin-bottom: .5em;
+				padding: 0 !important;
+			}
+		}/*container*/
+	}/*press */
+
+} /*end media query*/

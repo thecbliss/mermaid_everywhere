@@ -1,15 +1,58 @@
-<html>
+<!DOCTYPE html>
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="ClearType" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<head>
-  <title>Mermaid Norfolk</title>
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <link rel="stylesheet" href="css/L.Control.Sidebar.css" />
-  <link rel="stylesheet" href="css/map.css">
-</head>
+    <!-- Title, desc -->
+    <title>Mermaid Finder</title>
+    <meta name="description" content="">
 
-<body>
-    <div class='custom-popup' id="map"></div>
+    <!-- Styles -->
+    <link type="text/css" rel="stylesheet/less" href="css/styles.less">
+    <link type="text/css" rel="stylesheet/less" href="css/mediaq.less">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link rel="stylesheet" href="css/L.Control.Sidebar.css" />
+    <link rel="stylesheet" href="css/map.css">
+
+        <!-- LESS CSS -->
+        <script type="text/javascript" src="js/less-1.7.3.min.js"></script>
+
+  </head>
+
+  <body>
+    <wrapper>
+      <header>
+        <div id="search">
+          <input id="search-box" type="text" name="firstname" placeholder="Search mermaids or artists"/>
+          <input id="gobutton" type="submit" value="Search!" />
+        </div>
+      </header>
+      <div class='custom-popup' id="largemap"></div>
+      <div id="moreinfo-container">
+        <div id="moreinfo">
+          <img src="images/thumb.png" alt="mermaid"/>
+
+          <div class="info">
+            <h3 class="title">"Jewel of Norfolk"</h3>
+            <h3 class="artist-name">by Bess Decker</h3>
+            <h3 class="sponsor-label">Sponsor:</h3>
+            <h3 class="sponsor-name">Decker, Cardon, Weintraub and Neskis</h3>
+          </div>
+          <div class='custom-popup' id="largemap"></div>
+          <div id="address-container">
+            <h3 class="address">109 East Main St. Norfolk, VA 23510</h3>
+            <input id="directionbutton" type="submit" value="Directions" />
+          </div>
+        </div><!--/moreinfo-->
+      </div><!--/moreinfo-container-->
+
+    </wrapper>
   </body>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>    <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>    	  	<script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/app.js"></script>
 </html>
