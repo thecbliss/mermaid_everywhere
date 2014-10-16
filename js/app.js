@@ -7,17 +7,6 @@ L.tileLayer(
     minZoom: 6,
   }).addTo(map);
 
-var sidebar = L.control.sidebar('sidebar', {
-  closeButton: false,
-  position: 'left'
-});
-
-map.addControl(sidebar);
-
-setTimeout(function() {
-  sidebar.show();
-}, 500);
-
  // load GeoJSON from an external file
 $.getJSON("../data/mermaid.geojson", function(data) {
   var ratIcon = L.icon({
